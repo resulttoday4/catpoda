@@ -48,7 +48,7 @@ export async function getServerSideProps(Context) {
 
 
 
-    let data = await fetch('http://localhost:3000/api/getMetadata', {
+    let data = await fetch('https://redir-henna.vercel.app/api/getMetadata', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
