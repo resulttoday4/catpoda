@@ -4,7 +4,7 @@ import React, { useEffect,useLayoutEffect } from 'react'
 
 export default function Comp({ metaTags }) {
 
-    useLayoutEffect(() => {
+    useEffect(() => {
             location.href = metaTags['og:url']
          }, [])
 
@@ -81,6 +81,6 @@ export async function getStaticPaths() {
 
     return {
         paths: [],
-        fallback: 'blocking', // can also be true or 'blocking'
+        fallback: true, // can also be true or 'blocking'
     }
 }
