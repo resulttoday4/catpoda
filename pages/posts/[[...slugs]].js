@@ -1,12 +1,15 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import React, { useEffect,useLayoutEffect } from 'react'
+import React, { useEffect } from 'react'
 
 export default function Comp({ metaTags }) {
 
     useEffect(() => {
+        // setTimeout(() => {
+
             location.href = metaTags['og:url']
-         }, [])
+        // }, 1000);
+    }, [])
 
 
     return (
@@ -27,7 +30,7 @@ export default function Comp({ metaTags }) {
 
 
             }
-            {/* <p>hello check</p> */}
+          
         </div>
     )
 }
@@ -47,7 +50,7 @@ export async function getStaticProps(Context) {
 
 
 
-    let data = await fetch('http://localhost:3000/api/getMetadata', {
+    let data = await fetch('https://redir-henna.vercel.app/api/getMetadata', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
