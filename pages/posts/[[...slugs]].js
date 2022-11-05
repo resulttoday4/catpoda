@@ -54,7 +54,7 @@ export async function getStaticProps(Context) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            url: 'https://dailypositive24.com/' + slugString
+            url: 'https://catuser.com/' + slugString    
         })
     })
 
