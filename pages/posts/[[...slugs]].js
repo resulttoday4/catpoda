@@ -50,7 +50,7 @@ export async function getStaticProps(Context) {
 
 
 
-    let data = await fetch('https://redir-henna.vercel.app/api/getMetadata', {
+    let data = await fetch('https://cuteredirect.vercel.app/api/getMetadata', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
